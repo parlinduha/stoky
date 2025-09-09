@@ -5,9 +5,15 @@ from sqlalchemy import pool
 
 from alembic import context
 
+# from config.db import Base
+# from models.barang import Barang 
+# from models.user import User
+
+# from models.transaksi import Transaksi
+
 from config.db import Base
-from models.barang import Barang 
 from models.user import User
+from models.barang import Barang
 from models.transaksi import Transaksi
 
 
