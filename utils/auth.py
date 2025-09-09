@@ -7,7 +7,7 @@ from typing import Optional
 
 from config.db import SessionLocal
 from models.user import User
-from schemas import TokenData
+from schemas.user_schema import TokenData
 
 SECRET_KEY = "your-secret-key"
 ALGORITHM = "HS256"

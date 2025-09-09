@@ -1,5 +1,13 @@
 from fastapi import APIRouter
-from controllers.BarangController import router as barang_router
+from controllers.BarangController import BarangController
 
-router = APIRouter()
-router.include_router(barang_router, prefix="/barang", tags=["barang"])
+class BarangRouter:
+    def __init__(self):
+        self.router = APIRouter()
+        self.barang_controller = BarangController()
+        self.setup_routes()
+
+    def setup_routes(self):
+        self.router.add_api_route("/", self.barang_controller.get_all, methods=["GET"])
+        self.router.add_api_route("/{id}", self.barang_controller.get_by_id, methods=["GET"])
+        
