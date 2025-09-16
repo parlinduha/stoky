@@ -1,3 +1,4 @@
+from models.transaksi import Transaksi
 class TransaksiController:
     def get_all(self):
         return {"message": "Get all transaksi"}
