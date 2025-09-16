@@ -8,4 +8,4 @@ alembic
 psycopg2
 pydantic_settings
 dotenv
-'pydantic[email]'
+pydantic[email]
